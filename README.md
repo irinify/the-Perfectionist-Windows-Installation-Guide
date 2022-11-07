@@ -58,6 +58,16 @@ C盘空间给大，有注册表写入的，重装系统会重装的软件，直�
 
 win 11 系统建议直接使用微软自带输入法
 
+```bash
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\InputMethod\Settings\CHS]
+"EnableExtraDomainType"=dword:00000001
+"Enable Double Pinyin"=dword:00000001
+"DoublePinyinScheme"=dword:0000000a
+"UserDefinedDoublePinyinScheme0"="小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt"
+```
+
 #### 3.5 激活、个性化设置、dism ++ 设置
 
 [沧水 kms ——绿色健康的 Windows 系统激活工具](https://kms.cangshui.net/)
@@ -146,7 +156,7 @@ scoop install keepassxc
 scoop install typora
 scoop install snipaste
 scoop install SumatraPDF
-scoop install vscode
+sudo scoop install vscode -g
 # 也可以同时安装多个
 scoop install keepassxc typora snipaste vscode
 
@@ -154,6 +164,7 @@ scoop install keepassxc typora snipaste vscode
 scoop bucket add nerd-fonts
 scoop install Source-Han-Sans-SC # 思源黑
 scoop install Source-Han-Serif-SC # 思源宋
+scoop install FiraCode # wt用的字体
 scoop install SarasaGothic-SC # 安装更纱黑体（简体中文）
 scoop install Wenquanyi-Microhei # 安装文泉驿微米黑
 scoop install Wenquanyi-Zenhei # 安装文泉驿正黑
