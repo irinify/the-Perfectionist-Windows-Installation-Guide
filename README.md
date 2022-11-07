@@ -156,9 +156,8 @@ scoop install keepassxc
 scoop install typora
 scoop install snipaste
 scoop install SumatraPDF
+# 不全局安装很多嵌入式网页无法加载
 sudo scoop install vscode -g
-# 也可以同时安装多个
-scoop install keepassxc typora snipaste vscode
 
 # 安装字体
 scoop bucket add nerd-fonts
@@ -208,6 +207,7 @@ settings.json 配置供参考
 
 ```bash
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
@@ -240,6 +240,7 @@ settings.json 配置供参考
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "experimental.rendering.forceFullRepaint": true,
     "experimental.rendering.software": true,
     "profiles": 
     {
@@ -249,25 +250,25 @@ settings.json 配置供参考
             "font": 
             {
                 "face": "Fira Code Retina",
-                "size": 12
+                "size": 12,
+                "weight": "medium"
             }
         },
         "list": 
         [
             {
-                "commandline": "powershell.exe",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "PowerShell"
+                "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "cmd"
+                "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
             },
             {
-                "acrylicOpacity": 0.75,
                 "closeOnExit": "graceful",
                 "colorScheme": "GitBash",
                 "commandline": "C:\\Users\\1062\\scoop\\apps\\git\\current\\bin\\bash.exe --login -i -l",
@@ -275,13 +276,14 @@ settings.json 配置供参考
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "Consolas",
-                    "size": 10
+                    "face": "Fira Code Retina",
+                    "size": 12
                 },
                 "guid": "{00000000-0000-0000-0000-000000000001}",
                 "historySize": 9001,
                 "icon": "C:\\Users\\1062\\scoop\\apps\\git\\current\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "GitBash",
+                "opacity": 100,
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%",
@@ -795,6 +797,13 @@ custom_channels:
 scoop search redis
 # 需要安装到全局才能注册服务，否则权限不够
 sudo scoop install redis -g
+
+# 注册服务
+redis-server.exe --service-install redis.windows.conf --loglevel verbose
+# 卸载服务
+redis-server --service-uninstall
+# 启动服务
+redis-server --service-start
 ```
 
 亦可选择投身 WSL 的怀抱
