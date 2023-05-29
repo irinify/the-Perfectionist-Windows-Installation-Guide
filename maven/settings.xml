@@ -217,6 +217,7 @@ under the License.
     </profile>
     -->
 	<profile>
+    <!-- 全局JDK1.8配置 -->
 		<id>jdk1.8</id>
 		<activation>
 			<activeByDefault>true</activeByDefault>
@@ -274,4 +275,8 @@ under the License.
     <activeProfile>anotherAlwaysActiveProfile</activeProfile>
   </activeProfiles>
   -->
+  <!-- 激活配置 -->
+  <activeProfiles>
+      <activeProfile>jdk1.8</activeProfile>
+  </activeProfiles>
 </settings>

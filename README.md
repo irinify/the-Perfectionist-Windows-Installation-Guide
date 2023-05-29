@@ -38,25 +38,29 @@ C盘空间给大，有注册表写入的，重装系统会重装的软件，直�
 - [nextitellyou](https://next.itellyou.cn/Original/Index#)
 - [imsdn](https://www.imsdn.cn/)
 
-推荐**Windows 10 Enterprise LTSC 2021 (x64)**，没有微软商店，仅预装新版edge浏览器。==注：该版本支持有线网络连接，没有无线网卡驱动，请提前准备==
+推荐安装 Windows 11系统
 
-如果是大小核心的12代及以上 Intel 处理器，建议安装 win11，因为 win10 及以下的系统不支持大小核处理器的优化。
+12代及以上 Intel 处理器，强烈建议安装 win11，因为 win10 及以下的系统不支持大小核处理器的优化。
+
+win10系统推荐**Windows 10 Enterprise LTSC 2021 (x64)**，没有微软商店，仅预装新版edge浏览器。==但该版本仅支持有线网络连接，没有无线网卡驱动，请提前准备==
 
 #### 3.2 装驱动
 
 建议先让 windows 自己更新的同时安装驱动，然后再去官网选择需要的驱动
 
-#### 3.3 装火绒
+#### 3.3 装安全防护
 
 [火绒](https://www.huorong.cn/) —— 根据需要添加弹窗拦截、垃圾清理、启动项管理、右键管理、流量浮窗
 
 #### 3.4 装输入法
 
+win 11 系统建议直接使用微软自带输入法
+
 推荐轻量化的手心输入法，最喜欢的两个功能点：中文模式下连续两次输入、自动转换为//，状态栏自定义，可竖排，可一键在全拼双拼切换
 
 ![image-20221019165502489](https://irinify-1252092174.cos.ap-nanjing.myqcloud.com/typora/image-20221019165502489.png)
 
-win 11 系统建议直接使用微软自带输入法
+微软自带输入法加载小鹤双拼
 
 ```bash
 Windows Registry Editor Version 5.00
